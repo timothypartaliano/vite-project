@@ -2,17 +2,25 @@
   export default {
     data() {
       return {
-        title: 'Hello World',
-        subtitle: 'Hello Vue'
+        number: 0
+      }
+    },
+    methods: {
+      increase() {
+        this.number ++
+      },
+      decrease() {
+        this.number --
       }
     }
   }
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
-    <br>
-  <h2>{{ subtitle }}</h2>
+  <h1>Counter App</h1>
+  <h2>{{ number }}</h2>
+  <button @click="decrease">-</button>
+  <button @click="increase">+</button>
 </template>
 
 <style>
