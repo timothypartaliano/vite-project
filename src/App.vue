@@ -3,6 +3,7 @@
     data() {
       return {
         number: 0,
+        input: 0,
         input: 0
       }
     },
@@ -11,9 +12,9 @@
         this.number += this.input
         this.input = 0
         event.preventDefault()
-      }
     }
   }
+}
 </script>
 
 <template>
