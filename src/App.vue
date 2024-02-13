@@ -9,13 +9,13 @@ export default {
       }
     },
     methods: {
-      increment(event) {
-        this.number += this.input
+      increment(event, input) {
+        this.number += input
         this.input = 0
         event.preventDefault()
     }
   },
-  components: { CounterApp }
+  components: { CounterApp, FormApp }
 }
 </script>
 
@@ -23,10 +23,7 @@ export default {
   <h1>Counter App</h1>
   <CounterApp :number="number" title="Component App"></CounterApp>
   
-  <form @submit="increment">
-    <input type="number" v-model="input">
-    <input type="submit">
-  </form>
+  <FormApp @increment="increment"></FormApp>
 
 </template>
 
